@@ -1,23 +1,38 @@
 import {DoubleSide} from "three";
-import {useTexture} from "@react-three/drei";
+import {Text, useTexture} from "@react-three/drei";
 
 export default function Artwork (){
     const texture = useTexture('https://www.artic.edu/iiif/2/a6d85bbc-82a7-d13c-36bb-a73ac98d6b8c/full/403,/0/default.jpg')
 
     return  <>
-        <mesh position-z={-5} position-y={ 10 } scale={10} >
+        <mesh position-z={-5} position-y={ 10 } scale={20} >
             <planeBufferGeometry/>
             <meshStandardMaterial
                 map={texture}
                 side={DoubleSide}
             />
         </mesh>
-        <mesh position-z={-5} position-y={ 10 } position-x={10} rotation-y={0} scale={10} >
-            <planeBufferGeometry/>
-            <meshStandardMaterial
-                side={DoubleSide}
-                color="blue"
+
+        <Text
+            position={[1, 7 ,1]}
+            color="yellow"
+            wrapperClass="font"
+        >
+            Artwork Name here
+            <meshNormalMaterial
             />
-        </mesh>
+        </Text>
+
+        <Text
+            // font="./bangers-v20-latin-regular.woff"
+            position={[1, 4,1]}
+            color="yellow"
+            wrapperClass="font"
+        >
+            Artwork informations here - 1967 - Blabla
+            <meshNormalMaterial
+            />
+        </Text>
+
     </>
 }
