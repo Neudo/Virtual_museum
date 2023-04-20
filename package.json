@@ -12,6 +12,7 @@
     "vite": "^4.0.4"
   },
   "dependencies": {
+    "@ionic/vue-router": "^7.0.2",
     "@react-three/drei": "^9.64.0",
     "@react-three/fiber": "^8.9.2",
     "leva": "^0.9.34",
