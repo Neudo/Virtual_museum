@@ -28,30 +28,40 @@ export default function Experience()
     const { textPosition } = useControls('Site name position', {
         textPosition: { value: [ 7.5,1,-4.9] }
     })
+
+    const {directionalLight} = useControls('DirectionalLight', {
+        directionLight: {
+            position: [1,2,3],
+            intensity:[1.5]
+        }
+    })
+
+
     return <>
         <OrbitControls/>
 
         {/*Lights*/}
         <directionalLight castShadow position={ [ 1, 2, 3 ] } intensity={ 1.5 } />
-        <ambientLight intensity={ .49 } />
+        <ambientLight intensity={ 0 } />
 
         {/*Site title*/}
-            <Text
-                position={ textPosition }
-                color="black"
-                wrapperClass="font"
-            >
-                Virtaum
-                <meshStandardMaterial
-                />
-            </Text>
+        <Text
+            position={ textPosition }
+            color="black"
+            wrapperClass="font"
+        >
+            Virtaum
+            <meshStandardMaterial
+            />
+        </Text>
 
         <Artwork />
 
         <Wall/>
 
         <Plane  receiveShadow position-y={ - 5 } rotation-x={ - Math.PI * 0.5 } scale={ 7 } args={[10, 10, 128,128]}  >
-            <meshStandardMaterial {...groundTextures}
+            {/*<meshStandardMaterial {...groundTextures}*/}
+            <meshStandardMaterial color={'black'}
             />
         </Plane>
 

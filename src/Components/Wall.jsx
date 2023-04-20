@@ -38,7 +38,7 @@ export default function Wall()
             position={wallPosition}
             args={ [22,22,.1] }
         >
-            <meshStandardMaterial color={'black'}  />
+            <meshStandardMaterial color={wallColor}  />
         </Box>
 
     </mesh>
