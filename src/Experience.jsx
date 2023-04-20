@@ -32,10 +32,9 @@ export default function Experience()
     const {directionalLight} = useControls('DirectionalLight', {
         directionLight: {
             position: [1,2,3],
-            intensity:[1.5]
+            intensity: 1.5
         }
     })
-
 
     return <>
         <OrbitControls/>
