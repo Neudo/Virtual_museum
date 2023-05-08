@@ -1,12 +1,9 @@
 import {
     Box, CameraControls, CubeCamera, Float, MeshReflectorMaterial, OrbitControls, Plane, Text, useTexture,
 } from "@react-three/drei";
-import {useLoader, useThree} from "@react-three/fiber";
-import {DoubleSide, MeshBasicMaterial, TextureLoader} from "three";
 import {button, folder, useControls} from "leva";
-import Artwork from "./Components/Artwork.jsx";
 import Wall from "./Components/Wall.jsx";
-import {useRef} from "react";
+import Artwork from "./Components/Artwork.jsx";
 
 
 
